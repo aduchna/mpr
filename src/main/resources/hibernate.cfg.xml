@@ -4,21 +4,19 @@
           "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
   <session-factory>
-    <property name="connection.url">jdbc:hsqldb:file:src/main/java/org/java/mpr/projekt/db/truckdb;shutdown=true</property>
+    <property name="connection.url">jdbc:hsqldb:file:src/main/java/org/wilk/mpr/base/bookstore;shutdown=true</property>
     <property name="connection.username">sa</property>
     <property name="connection.password"></property>
  
     <property name="connection.driver_class">org.hsqldb.jdbcDriver</property>
     <property name="dialect">org.hibernate.dialect.HSQLDialect</property>
-    <property name="show_sql">false</property>
+    <property name="show_sql">true</property>
  
     <property name="format_sql">true</property>
     <property name="hbm2ddl.auto">create-drop</property>
     <property name="connection.pool_size">0</property>
     <property name="current_session_context_class">thread</property>
  
-    <mapping class="org.java.mpr.projekt.beans.Company"/>
-    <mapping class="org.java.mpr.projekt.beans.Transport"/>
-    <mapping class="org.java.mpr.projekt.beans.Truck"/>
+    <mapping class="org.wilk.mpr.beans.Bookstore"/>
   </session-factory>
 </hibernate-configuration>
