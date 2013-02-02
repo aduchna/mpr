@@ -14,21 +14,22 @@ public class SearchBooks {
     
     private SessionFactory sf;
     
+    
     public SearchBooks(SessionFactory sessionFactory) {
         sf = sessionFactory;
     }
     
     public List<Book> searchByTitle(String title) {
-        Session session = sf.getCurrentSession();
-        Transaction transaction = session.beginTransaction();
+        Session session = sf.getCurrentSession(); 
+        Transaction transaction = session.beginTransaction(); 
 
-        Criteria criteria = session.createCriteria(Book.class);
-        criteria.add(Restrictions.eq("title", title));
-        List<Book> result = criteria.list();
+        Criteria criteria = session.createCriteria(Book.class); 
+        criteria.add(Restrictions.eq("title", title)); 
+        List<Book> result = criteria.list(); 
         
         transaction.commit();
 
-        return result;
+        return result; 
     }
     
     public List<Book> searchByIsbn(String isbn) {

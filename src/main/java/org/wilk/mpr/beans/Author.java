@@ -11,21 +11,22 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
-@Entity
+@Entity 
 public class Author implements Serializable {
     
-    @Id 
+    @Id  
     @GeneratedValue 
     private Long id; 
     private String name; 
-    private String adress;
+    private String adress; 
     
-    @ManyToOne
-    @JoinColumn(name="bookstore_fk")
+    @ManyToOne 
+    @JoinColumn(name="bookstore_fk") 
     private Bookstore bookstore; 
     
-    @OneToMany(cascade=CascadeType.ALL, mappedBy="author")
-    private List<Book> books;
+    @OneToMany(cascade=CascadeType.ALL, mappedBy="author") 
+    private List<Book> books; 
+    
     
     public Long getId() {
         return id;

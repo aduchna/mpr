@@ -17,7 +17,7 @@ public class Main {
     {
         SessionFactory sessionFactory =  new Configuration().configure().buildSessionFactory();
         Session session = sessionFactory.openSession();
-            
+        
         Transaction transaction = session.beginTransaction();
         
         Bookstore bookstore = new Bookstore("Matras");

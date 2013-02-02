@@ -15,11 +15,12 @@ import org.wilk.mpr.beans.Book;
 import org.wilk.mpr.beans.Bookstore;
 import org.wilk.mpr.core.SearchBooks;
 
+// patrz opis Author Test
 public class SearchBooksTest {
     
     SearchBooks searchBooks;
     
-    @Before
+    @Before // skopiowane z maina ;)
     public void setUp() {
         SessionFactory sessionFactory =  new Configuration().configure().buildSessionFactory();
         Session session = sessionFactory.openSession();
@@ -82,14 +83,14 @@ public class SearchBooksTest {
         session.close();
     }
     
-    @Test
+    @Test // to też z maina
     public void searchByTitle() {
         List<Book> result = searchBooks.searchByTitle("Kuchnia polska");
         assertEquals(1, result.size());
         assertEquals("Kuchnia polska", result.get(0).getTitle());
     }
     
-    @Test
+    @Test // jak i to
     public void searchByIsbn() {
         List<Book> result = searchBooks.searchByIsbn("23123-2302");
         assertEquals(1, result.size());

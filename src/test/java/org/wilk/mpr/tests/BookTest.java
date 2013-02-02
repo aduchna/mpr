@@ -7,6 +7,7 @@ import org.wilk.mpr.beans.Book;
 import static org.junit.Assert.*;
 import org.wilk.mpr.beans.Author;
 
+// patrz opis Author Test
 public class BookTest {
     
     private Book book;

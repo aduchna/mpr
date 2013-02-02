@@ -9,6 +9,7 @@ import org.junit.Test;
 import org.wilk.mpr.beans.Author;
 import org.wilk.mpr.beans.Bookstore;
 
+// patrz opis Author Test
 public class BookstoreTest {
     
     private Bookstore bookstore;

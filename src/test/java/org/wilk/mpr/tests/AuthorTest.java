@@ -14,15 +14,16 @@ public class AuthorTest {
     
     private Author author;
     
-    @Before
+    @Before // metoda z tą adnotacją wykonuję się przed testami
     public void setUp() {
         author = new Author();
     }
     
-    @Test
+    @Test // metoda z tą adnotacją oznacza test - i wykonywana jest jako test przez JUnit'a
     public void name() {
         author.setName("test");
-        assertEquals("test", author.getName());
+        assertEquals("test", author.getName()); // pierwszy elemnt to wartość oczekiwana drugi to zwrócona
+        // jeśli są te same to assercja zwraca true i test jest zaliczony, w wypadku false test zwraca fail
     }
     
     @Test
@@ -42,6 +43,6 @@ public class AuthorTest {
     public void books() {
         List<Book> books = new ArrayList<Book>();
         author.setBooks(books);
-        assertSame(books, author.getBooks());
+        assertSame(books, author.getBooks()); // assercja sprawdza czy mamy do czynienia z dokładnie z tym samym obiektem na podstawie adresu w pamięci komputera
     }
 }
